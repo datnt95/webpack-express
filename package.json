@@ -1,0 +1,36 @@
+{
+  "name": "express-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack-dev-server": "webpack-dev-server",
+    "webpack": "webpack",
+    "start": "node ./dist/server.js",
+    "build": "rm -rf dist && webpack --mode development",
+    "prod": "npm run webpack -- --env.mode production",
+    "dev": "npm run webpack-dev-server -- --env.mode development --hot",
+    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
+    "dev:debug": "npm run debug -- --env.mode development",
+    "prod:debug": "npm run debug -- --env.mode production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "express": "^4.17.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2",
+    "winston": "^3.2.1"
+  }
+}
