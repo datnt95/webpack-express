@@ -7,16 +7,10 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "NodeJS",
-      "program": "${workspaceFolder}/node_modules/webpack-dev-server/bin/webpack-dev-server",
-      "args": [
-        "--config",
-        "webpack.config.js",
-        "--hot",
-        "--progress"
-      ],
-      "autoAttachChildProcesses": true,
-      "stopOnEntry": true
+      "name": "Debug",
+      "program": "${workspaceFolder}/server.js",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/babel-node",
+      "runtimeArgs": ["--nolazy"]
     }
   ]
 }

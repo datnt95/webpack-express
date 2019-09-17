@@ -1,1 +1,194 @@
-!function(e){function n(e){var n=require("./"+e+"."+o+".hot-update.js");!function(e,n){if(!O[e]||!g[e])return;for(var r in g[e]=!1,n)Object.prototype.hasOwnProperty.call(n,r)&&(h[r]=n[r]);0==--y&&0===m&&D()}(n.id,n.modules)}var r,t=!0,o="eb79e927e8f842a04d43",i={},c=[],d=[];function a(e){var n=x[e];if(!n)return E;var t=function(t){return n.hot.active?(x[t]?-1===x[t].parents.indexOf(e)&&x[t].parents.push(e):(c=[e],r=t),-1===n.children.indexOf(t)&&n.children.push(t)):(console.warn("[HMR] unexpected require("+t+") from disposed module "+e),c=[]),E(t)},o=function(e){return{configurable:!0,enumerable:!0,get:function(){return E[e]},set:function(n){E[e]=n}}};for(var i in E)Object.prototype.hasOwnProperty.call(E,i)&&"e"!==i&&"t"!==i&&Object.defineProperty(t,i,o(i));return t.e=function(e){return"ready"===u&&p("prepare"),m++,E.e(e).then(n,(function(e){throw n(),e}));function n(){m--,"prepare"===u&&(b[e]||j(e),0===m&&0===y&&D())}},t.t=function(e,n){return 1&n&&(e=t(e)),E.t(e,-2&n)},t}function l(e){var n={_acceptedDependencies:{},_declinedDependencies:{},_selfAccepted:!1,_selfDeclined:!1,_disposeHandlers:[],_main:r!==e,active:!0,accept:function(e,r){if(void 0===e)n._selfAccepted=!0;else if("function"==typeof e)n._selfAccepted=e;else if("object"==typeof e)for(var t=0;t<e.length;t++)n._acceptedDependencies[e[t]]=r||function(){};else n._acceptedDependencies[e]=r||function(){}},decline:function(e){if(void 0===e)n._selfDeclined=!0;else if("object"==typeof e)for(var r=0;r<e.length;r++)n._declinedDependencies[e[r]]=!0;else n._declinedDependencies[e]=!0},dispose:function(e){n._disposeHandlers.push(e)},addDisposeHandler:function(e){n._disposeHandlers.push(e)},removeDisposeHandler:function(e){var r=n._disposeHandlers.indexOf(e);r>=0&&n._disposeHandlers.splice(r,1)},check:w,apply:P,status:function(e){if(!e)return u;s.push(e)},addStatusHandler:function(e){s.push(e)},removeStatusHandler:function(e){var n=s.indexOf(e);n>=0&&s.splice(n,1)},data:i[e]};return r=void 0,n}var s=[],u="idle";function p(e){u=e;for(var n=0;n<s.length;n++)s[n].call(null,e)}var f,h,v,y=0,m=0,b={},g={},O={};function _(e){return+e+""===e?+e:e}function w(e){if("idle"!==u)throw new Error("check() is only allowed in idle status");return t=e,p("check"),function(){try{var e=require("./"+o+".hot-update.json")}catch(e){return Promise.resolve()}return Promise.resolve(e)}().then((function(e){if(!e)return p("idle"),null;g={},b={},O=e.c,v=e.h,p("prepare");var n=new Promise((function(e,n){f={resolve:e,reject:n}}));h={};return j(0),"prepare"===u&&0===m&&0===y&&D(),n}))}function j(e){O[e]?(g[e]=!0,y++,n(e)):b[e]=!0}function D(){p("ready");var e=f;if(f=null,e)if(t)Promise.resolve().then((function(){return P(t)})).then((function(n){e.resolve(n)}),(function(n){e.reject(n)}));else{var n=[];for(var r in h)Object.prototype.hasOwnProperty.call(h,r)&&n.push(_(r));e.resolve(n)}}function P(n){if("ready"!==u)throw new Error("apply() is only allowed in ready status");var r,t,d,a,l;function s(e){for(var n=[e],r={},t=n.map((function(e){return{chain:[e],id:e}}));t.length>0;){var o=t.pop(),i=o.id,c=o.chain;if((a=x[i])&&!a.hot._selfAccepted){if(a.hot._selfDeclined)return{type:"self-declined",chain:c,moduleId:i};if(a.hot._main)return{type:"unaccepted",chain:c,moduleId:i};for(var d=0;d<a.parents.length;d++){var l=a.parents[d],s=x[l];if(s){if(s.hot._declinedDependencies[i])return{type:"declined",chain:c.concat([l]),moduleId:i,parentId:l};-1===n.indexOf(l)&&(s.hot._acceptedDependencies[i]?(r[l]||(r[l]=[]),f(r[l],[i])):(delete r[l],n.push(l),t.push({chain:c.concat([l]),id:l})))}}}}return{type:"accepted",moduleId:e,outdatedModules:n,outdatedDependencies:r}}function f(e,n){for(var r=0;r<n.length;r++){var t=n[r];-1===e.indexOf(t)&&e.push(t)}}n=n||{};var y={},m=[],b={},g=function(){console.warn("[HMR] unexpected require("+j.moduleId+") to disposed module")};for(var w in h)if(Object.prototype.hasOwnProperty.call(h,w)){var j;l=_(w);var D=!1,P=!1,H=!1,I="";switch((j=h[w]?s(l):{type:"disposed",moduleId:w}).chain&&(I="\nUpdate propagation: "+j.chain.join(" -> ")),j.type){case"self-declined":n.onDeclined&&n.onDeclined(j),n.ignoreDeclined||(D=new Error("Aborted because of self decline: "+j.moduleId+I));break;case"declined":n.onDeclined&&n.onDeclined(j),n.ignoreDeclined||(D=new Error("Aborted because of declined dependency: "+j.moduleId+" in "+j.parentId+I));break;case"unaccepted":n.onUnaccepted&&n.onUnaccepted(j),n.ignoreUnaccepted||(D=new Error("Aborted because "+l+" is not accepted"+I));break;case"accepted":n.onAccepted&&n.onAccepted(j),P=!0;break;case"disposed":n.onDisposed&&n.onDisposed(j),H=!0;break;default:throw new Error("Unexception type "+j.type)}if(D)return p("abort"),Promise.reject(D);if(P)for(l in b[l]=h[l],f(m,j.outdatedModules),j.outdatedDependencies)Object.prototype.hasOwnProperty.call(j.outdatedDependencies,l)&&(y[l]||(y[l]=[]),f(y[l],j.outdatedDependencies[l]));H&&(f(m,[j.moduleId]),b[l]=g)}var A,k=[];for(t=0;t<m.length;t++)l=m[t],x[l]&&x[l].hot._selfAccepted&&b[l]!==g&&k.push({module:l,errorHandler:x[l].hot._selfAccepted});p("dispose"),Object.keys(O).forEach((function(e){!1===O[e]&&function(e){delete installedChunks[e]}(e)}));for(var q,M,S=m.slice();S.length>0;)if(l=S.pop(),a=x[l]){var C={},U=a.hot._disposeHandlers;for(d=0;d<U.length;d++)(r=U[d])(C);for(i[l]=C,a.hot.active=!1,delete x[l],delete y[l],d=0;d<a.children.length;d++){var F=x[a.children[d]];F&&((A=F.parents.indexOf(l))>=0&&F.parents.splice(A,1))}}for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(a=x[l]))for(M=y[l],d=0;d<M.length;d++)q=M[d],(A=a.children.indexOf(q))>=0&&a.children.splice(A,1);for(l in p("apply"),o=v,b)Object.prototype.hasOwnProperty.call(b,l)&&(e[l]=b[l]);var R=null;for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(a=x[l])){M=y[l];var T=[];for(t=0;t<M.length;t++)if(q=M[t],r=a.hot._acceptedDependencies[q]){if(-1!==T.indexOf(r))continue;T.push(r)}for(t=0;t<T.length;t++){r=T[t];try{r(M)}catch(e){n.onErrored&&n.onErrored({type:"accept-errored",moduleId:l,dependencyId:M[t],error:e}),n.ignoreErrored||R||(R=e)}}}for(t=0;t<k.length;t++){var L=k[t];l=L.module,c=[l];try{E(l)}catch(e){if("function"==typeof L.errorHandler)try{L.errorHandler(e)}catch(r){n.onErrored&&n.onErrored({type:"self-accept-error-handler-errored",moduleId:l,error:r,originalError:e}),n.ignoreErrored||R||(R=r),R||(R=e)}else n.onErrored&&n.onErrored({type:"self-accept-errored",moduleId:l,error:e}),n.ignoreErrored||R||(R=e)}}return R?(p("fail"),Promise.reject(R)):(p("idle"),new Promise((function(e){e(m)})))}var x={};function E(n){if(x[n])return x[n].exports;var r=x[n]={i:n,l:!1,exports:{},hot:l(n),parents:(d=c,c=[],d),children:[]};return e[n].call(r.exports,r,r.exports,a(n)),r.l=!0,r.exports}E.m=e,E.c=x,E.d=function(e,n,r){E.o(e,n)||Object.defineProperty(e,n,{enumerable:!0,get:r})},E.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},E.t=function(e,n){if(1&n&&(e=E(e)),8&n)return e;if(4&n&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(E.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&n&&"string"!=typeof e)for(var t in e)E.d(r,t,function(n){return e[n]}.bind(null,t));return r},E.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return E.d(n,"a",n),n},E.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},E.p="",E.h=function(){return o},a(3)(E.s=3)}([function(e,n){e.exports=require("winston")},function(e,n){e.exports=require("express")},function(e,n){e.exports=require("path")},function(e,n,r){"use strict";r.r(n);var t=r(2),o=r.n(t),i=r(1),c=r.n(i),d=r(0),a=r.n(d),l=a.a.createLogger({level:"info",format:a.a.format.json(),defaultMeta:{service:"user-service"},transports:[new a.a.transports.File({filename:"".concat("./src/logs","/error.log"),level:"error"}),new a.a.transports.File({filename:"".concat("./src/logs","/combined.log")})]}),s=process.env.PORT||8080,u=c()(),p=__dirname,f=o.a.join(p,"index.html");u.use(c.a.static(p)),u.get("*",(function(e,n){n.sendFile(f)})),u.listen(s,(function(){console.log("Press Ctrl+C to quit."),console.log("App listening to ".concat(s,"....")),l.info("App listening to ".concat(s,"....")),l.info("Press Ctrl+C to quit.")}))}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./server.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./server.js":
+/*!*******************!*\
+  !*** ./server.js ***!
+  \*******************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! path */ \"path\");\n/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _src_middleware_logger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src/middleware/logger */ \"./src/middleware/logger.js\");\n/* harmony import */ var _src_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./src/config */ \"./src/config/index.js\");\n\n\n\n\nvar PORT = process.env.PORT || 8080;\nvar app = express__WEBPACK_IMPORTED_MODULE_1___default()();\nvar DIST_DIR = __dirname;\nvar HTML_FILE = path__WEBPACK_IMPORTED_MODULE_0___default.a.join(DIST_DIR, 'index.html');\napp.use(express__WEBPACK_IMPORTED_MODULE_1___default.a[\"static\"](DIST_DIR));\napp.get('*', function (req, res) {\n  res.sendFile(HTML_FILE);\n});\napp.listen(PORT, function () {\n  console.log('Press Ctrl+C to quit.');\n  console.log(\"App listening to \".concat(PORT, \"....\"));\n  console.log(_src_config__WEBPACK_IMPORTED_MODULE_3__[\"default\"]);\n  _src_middleware_logger__WEBPACK_IMPORTED_MODULE_2__[\"default\"].info(\"App listening to \".concat(PORT, \"....\"));\n  _src_middleware_logger__WEBPACK_IMPORTED_MODULE_2__[\"default\"].info('Press Ctrl+C to quit.');\n});\n\n//# sourceURL=webpack:///./server.js?");
+
+/***/ }),
+
+/***/ "./src/config/development.js":
+/*!***********************************!*\
+  !*** ./src/config/development.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  'mode': 'development'\n});\n\n//# sourceURL=webpack:///./src/config/development.js?");
+
+/***/ }),
+
+/***/ "./src/config/index.js":
+/*!*****************************!*\
+  !*** ./src/config/index.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _development__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./development */ \"./src/config/development.js\");\n/* harmony import */ var _production__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./production */ \"./src/config/production.js\");\n\n\n\nvar getEnvConf = function getEnvConf(env) {\n  switch (env) {\n    case 'developmnet':\n      return _development__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n\n    case 'production':\n      return _production__WEBPACK_IMPORTED_MODULE_1__[\"default\"];\n\n    default:\n      return;\n  }\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getEnvConf(process.env));\n\n//# sourceURL=webpack:///./src/config/index.js?");
+
+/***/ }),
+
+/***/ "./src/config/production.js":
+/*!**********************************!*\
+  !*** ./src/config/production.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  'mode': 'development'\n});\n\n//# sourceURL=webpack:///./src/config/production.js?");
+
+/***/ }),
+
+/***/ "./src/constants.js":
+/*!**************************!*\
+  !*** ./src/constants.js ***!
+  \**************************/
+/*! exports provided: PATH_LOGGER */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"PATH_LOGGER\", function() { return PATH_LOGGER; });\nvar PATH_LOGGER = './src/logs';\n\n//# sourceURL=webpack:///./src/constants.js?");
+
+/***/ }),
+
+/***/ "./src/middleware/logger.js":
+/*!**********************************!*\
+  !*** ./src/middleware/logger.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var winston__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! winston */ \"winston\");\n/* harmony import */ var winston__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(winston__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ \"./src/constants.js\");\n\n\nvar logger = winston__WEBPACK_IMPORTED_MODULE_0___default.a.createLogger({\n  level: 'info',\n  format: winston__WEBPACK_IMPORTED_MODULE_0___default.a.format.json(),\n  defaultMeta: {\n    service: 'user-service'\n  },\n  transports: [new winston__WEBPACK_IMPORTED_MODULE_0___default.a.transports.File({\n    filename: \"\".concat(_constants__WEBPACK_IMPORTED_MODULE_1__[\"PATH_LOGGER\"], \"/error.log\"),\n    level: 'error'\n  }), new winston__WEBPACK_IMPORTED_MODULE_0___default.a.transports.File({\n    filename: \"\".concat(_constants__WEBPACK_IMPORTED_MODULE_1__[\"PATH_LOGGER\"], \"/combined.log\")\n  })]\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (logger);\n\n//# sourceURL=webpack:///./src/middleware/logger.js?");
+
+/***/ }),
+
+/***/ "express":
+/*!**************************!*\
+  !*** external "express" ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"express\");\n\n//# sourceURL=webpack:///external_%22express%22?");
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"path\");\n\n//# sourceURL=webpack:///external_%22path%22?");
+
+/***/ }),
+
+/***/ "winston":
+/*!**************************!*\
+  !*** external "winston" ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"winston\");\n\n//# sourceURL=webpack:///external_%22winston%22?");
+
+/***/ })
+
+/******/ });
