@@ -56,3 +56,5 @@
 {"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
 {"message":"App listening to 8080....","level":"info","service":"user-service"}
 {"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
+{"message":"App listening to 8080....","level":"info","service":"user-service"}
+{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}

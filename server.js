@@ -1,5 +1,5 @@
 import path from 'path';
-import express from  'express';
+import express from 'express';
 import logger from './src/middleware/logger';
 import config from './src/config';
 
@@ -15,8 +15,8 @@ app.get('*', (req, res) => {
 
 app.listen(PORT, () => {
   console.log('Press Ctrl+C to quit.');
-  console.log(`App listening to ${PORT}....`);
+  console.log(`App listening to ${ PORT }....`);
   console.log(config);
-  logger.info(`App listening to ${PORT}....`);
+  logger.info(`App listening to ${ PORT }....`);
   logger.info('Press Ctrl+C to quit.');
 });
