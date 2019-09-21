@@ -26,6 +26,7 @@ module.exports = {
       "enforceForRenamedProperties": false
     }],
     "prefer-template": "error",
-    "template-curly-spacing": ["error", "always"]
+    "template-curly-spacing": ["error", "always"],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 1}]
   }
 }

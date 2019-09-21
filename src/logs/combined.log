@@ -6,55 +6,14 @@
 {"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
 {"message":"App listening to 8080....","level":"info","service":"user-service"}
 {"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
-{"message":"App listening to 8080....","level":"info","service":"user-service"}
-{"message":"Press Ctrl+C to quit.","level":"info","service":"user-service"}
+{"level":"\u001b[32minfo\u001b[39m","message":"POST / 404 3ms","meta":{"res":{"statusCode":404},"req":{"url":"/","headers":{"cache-control":"no-cache","postman-token":"21ccda1a-6c4e-4d05-8de5-6d0cf2f6f110","user-agent":"PostmanRuntime/7.6.0","accept":"*/*","host":"localhost:8080","cookie":"JSESSIONID=CB30F9C7A428106DA4F58694AA8B368A","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"},"method":"POST","httpVersion":"1.1","originalUrl":"/","query":{}},"responseTime":3}}
+{"level":"\u001b[32minfo\u001b[39m","message":"GET / 404 1ms","meta":{"res":{"statusCode":404},"req":{"url":"/","headers":{"cache-control":"no-cache","postman-token":"f01537cd-6329-4faa-bca0-486caf973dd7","user-agent":"PostmanRuntime/7.6.0","accept":"*/*","host":"localhost:8080","cookie":"JSESSIONID=CB30F9C7A428106DA4F58694AA8B368A","accept-encoding":"gzip, deflate","connection":"keep-alive"},"method":"GET","httpVersion":"1.1","originalUrl":"/","query":{}},"responseTime":1}}
+{"level":"\u001b[32minfo\u001b[39m","message":"GET / 404 0ms","meta":{"res":{"statusCode":404},"req":{"url":"/","headers":{"cache-control":"no-cache","postman-token":"2c0af05b-2a82-4da4-afcb-ef2f1d00e172","user-agent":"PostmanRuntime/7.6.0","accept":"*/*","host":"localhost:8080","cookie":"JSESSIONID=CB30F9C7A428106DA4F58694AA8B368A","accept-encoding":"gzip, deflate","connection":"keep-alive"},"method":"GET","httpVersion":"1.1","originalUrl":"/","query":{}},"responseTime":0}}
+{"level":"\u001b[32minfo\u001b[39m","message":"GET / 404 0ms","meta":{"res":{"statusCode":404},"req":{"url":"/","headers":{"cache-control":"no-cache","postman-token":"d3010d86-5546-4638-a0d0-71b31752914e","user-agent":"PostmanRuntime/7.6.0","accept":"*/*","host":"localhost:8080","cookie":"JSESSIONID=CB30F9C7A428106DA4F58694AA8B368A","accept-encoding":"gzip, deflate","connection":"keep-alive"},"method":"GET","httpVersion":"1.1","originalUrl":"/","query":{}},"responseTime":0}}
+{"level":"\u001b[32minfo\u001b[39m","message":"GET / 404 1ms","meta":{"res":{"statusCode":404},"req":{"url":"/","headers":{"cache-control":"no-cache","postman-token":"60a9653c-b7cf-45af-9851-d37e4d4b5561","user-agent":"PostmanRuntime/7.6.0","accept":"*/*","host":"localhost:8080","cookie":"JSESSIONID=CB30F9C7A428106DA4F58694AA8B368A","accept-encoding":"gzip, deflate","connection":"keep-alive"},"method":"GET","httpVersion":"1.1","originalUrl":"/","query":{}},"responseTime":1}}
+{"level":"\u001b[32minfo\u001b[39m","message":"GET /test 404 4ms","meta":{"res":{"statusCode":404},"req":{"url":"/test","headers":{"cache-control":"no-cache","postman-token":"fe48235b-f5d9-4170-ada4-6e46b44bc8c2","user-agent":"PostmanRuntime/7.6.0","accept":"*/*","host":"localhost:8080","cookie":"JSESSIONID=CB30F9C7A428106DA4F58694AA8B368A","accept-encoding":"gzip, deflate","connection":"keep-alive"},"method":"GET","httpVersion":"1.1","originalUrl":"/test","query":{}},"responseTime":4}}
+{"level":"\u001b[32minfo\u001b[39m","message":"GET / 404 8ms","meta":{"res":{"statusCode":404},"req":{"url":"/","headers":{"cache-control":"no-cache","postman-token":"50f7d452-f09d-4b6d-bde0-2956ef9c7769","user-agent":"PostmanRuntime/7.6.0","accept":"*/*","host":"localhost:8080","cookie":"JSESSIONID=CB30F9C7A428106DA4F58694AA8B368A","accept-encoding":"gzip, deflate","connection":"keep-alive"},"method":"GET","httpVersion":"1.1","originalUrl":"/","query":{}},"responseTime":8}}
+{"level":"\u001b[32minfo\u001b[39m","message":"GET / 404 0ms","meta":{"res":{"statusCode":404},"req":{"url":"/","headers":{"cache-control":"no-cache","postman-token":"272b9ca0-638b-4040-ace7-4759a25d88f0","user-agent":"PostmanRuntime/7.6.0","accept":"*/*","host":"localhost:8080","cookie":"JSESSIONID=CB30F9C7A428106DA4F58694AA8B368A","accept-encoding":"gzip, deflate","connection":"keep-alive"},"method":"GET","httpVersion":"1.1","originalUrl":"/","query":{}},"responseTime":0}}
+{"level":"\u001b[32minfo\u001b[39m","message":"GET / 200 2ms","meta":{"res":{"statusCode":200},"req":{"url":"/","headers":{"cache-control":"no-cache","postman-token":"68caffc6-6c21-41c2-8712-7d8a30bcae61","user-agent":"PostmanRuntime/7.6.0","accept":"*/*","host":"localhost:8080","cookie":"JSESSIONID=CB30F9C7A428106DA4F58694AA8B368A","accept-encoding":"gzip, deflate","connection":"keep-alive"},"method":"GET","httpVersion":"1.1","originalUrl":"/","query":{}},"responseTime":2}}
+{"level":"\u001b[32minfo\u001b[39m","message":"GET / 404 4ms","meta":{"res":{"statusCode":404},"req":{"url":"/","headers":{"cache-control":"no-cache","postman-token":"280e580f-355d-476e-83ba-7d564340a2ad","user-agent":"PostmanRuntime/7.6.0","accept":"*/*","host":"localhost:8080","cookie":"JSESSIONID=CB30F9C7A428106DA4F58694AA8B368A","accept-encoding":"gzip, deflate","connection":"keep-alive"},"method":"GET","httpVersion":"1.1","originalUrl":"/","query":{}},"responseTime":4}}
+{"level":"\u001b[32minfo\u001b[39m","message":"GET / 404 3ms","meta":{"res":{"statusCode":404},"req":{"url":"/","headers":{"cache-control":"no-cache","postman-token":"33ac3fd7-1244-4bdd-9794-b9e424e3cf49","user-agent":"PostmanRuntime/7.6.0","accept":"*/*","host":"localhost:8080","cookie":"JSESSIONID=CB30F9C7A428106DA4F58694AA8B368A","accept-encoding":"gzip, deflate","connection":"keep-alive"},"method":"GET","httpVersion":"1.1","originalUrl":"/","query":{}},"responseTime":3}}
