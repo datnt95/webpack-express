@@ -3,6 +3,7 @@ import expressWinston from 'express-winston';
 import { PATH_LOGGER } from '../constants';
 
 const logger = expressWinston.logger({
+  level: 'info',
   transports: [
     new winston.transports.File({ filename: `${ PATH_LOGGER }/error.log`, level: 'error' }),
     new winston.transports.File({ filename: `${ PATH_LOGGER }/combined.log` })
@@ -17,17 +18,5 @@ const logger = expressWinston.logger({
   colorize: false,
   ignoreRoute: function() {return false;}
 });
-
-// const logger = winston.createLogger({
-//   level: 'info',
-//   format: winston.format.json(),
-//   defaultMeta: {
-//     service: 'user-service'
-//   },
-//   transports: [
-//     new winston.transports.File({ filename: `${ PATH_LOGGER }/error.log`, level: 'error' }),
-//     new winston.transports.File({ filename: `${ PATH_LOGGER }/combined.log` })
-//   ]
-// });
 
 export default logger;
